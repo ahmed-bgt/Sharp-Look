@@ -141,18 +141,18 @@
      ========================================================================== */
   if (btnGenerateBooking) {
     btnGenerateBooking.addEventListener("click", function () {
-      const service = bookingService ? bookingService.value : "Executive Haircut & Styling";
+      const service = bookingService ? bookingService.value : "Haircut & Styling";
       const date = bookingDate ? bookingDate.value : "Today";
       const time = bookingTime ? bookingTime.value : "Preferred Slot";
       const guests = bookingGuests ? bookingGuests.value : "1 Person";
 
       const messageText = 
-        `Hello Sharp Look! I would like to book an appointment at Hyatt Regency Riyadh Olaya:\n\n` +
+        `Hello Sharp Look! I would like to inquire about an appointment at Hyatt Regency Riyadh Olaya:\n\n` +
         `✂️ Service: ${service}\n` +
         `📅 Day: ${date}\n` +
         `⏰ Time Slot: ${time}\n` +
         `👥 Guests: ${guests}\n\n` +
-        `Please let me know if this slot is available. Thank you!`;
+        `Please let me know your availability and details. Thank you!`;
 
       const encodedMessage = encodeURIComponent(messageText);
       const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodedMessage}`;
